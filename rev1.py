@@ -41,6 +41,7 @@ vector_z = input()
 
 # load array with offset vector and filler data
 transform_matrix = numpy.array([ [0,0,0,vector_x],[0,0,0,vector_y],[0,0,0,vector_z],[0,0,0,1] ]) 
+matrix_product = numpy.array([ [0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0] ]) 
 
 if(axis.lower()=='x'): # x-rotation matrix data
       transform_matrix[0][0] = 1
@@ -81,12 +82,15 @@ if(axis.lower()=='z'): # x-rotation matrix data
       transform_matrix[2][1] = 0
       transform_matrix[2][2] = 1 
 
+transform_matrix = numpy.array(transform_matrix,dtype=float)
+inverse_matrix = numpy.linalg.inv(transform_matrix)
 
-
-print('The transform is')
+numpy.set_printoptions(formatter={'float': lambda x: "{0:0.3f}".format(x)})
+print('The transform is:')
 print(transform_matrix)
-print('The inverse transform is')
-print(transform_matrix.T)
-
+print('The inverse transform is:')
+print(inverse_matrix)
+print('The product of the transform and the inverse transform is:')
+print(numpy.dot(transform_matrix,inverse_matrix))
       
       
