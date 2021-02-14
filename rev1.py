@@ -56,7 +56,7 @@ if(axis.lower()=='x'): # x-rotation matrix data
       transform_matrix[2][1] = numpy.sin(degrees_rad)
       transform_matrix[2][2] = numpy.cos(degrees_rad)
 
-if(axis.lower()=='y'): # x-rotation matrix data
+if(axis.lower()=='y'): # y-rotation matrix data
       transform_matrix[0][0] = numpy.cos(degrees_rad)
       transform_matrix[0][1] = 0
       transform_matrix[0][2] = numpy.sin(degrees_rad)
@@ -69,7 +69,7 @@ if(axis.lower()=='y'): # x-rotation matrix data
       transform_matrix[2][1] = 0
       transform_matrix[2][2] = numpy.cos(degrees_rad)    
       
-if(axis.lower()=='z'): # x-rotation matrix data
+if(axis.lower()=='z'): # z-rotation matrix data
       transform_matrix[0][0] = numpy.cos(degrees_rad)
       transform_matrix[0][1] = -1*numpy.sin(degrees_rad)
       transform_matrix[0][2] = 0
