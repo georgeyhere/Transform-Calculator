@@ -23,20 +23,20 @@ while (True):
       axis = input("Error: invalid input. Please enter (x), (y), or (z) and press enter.")
 
 # get degrees of rotation
-print("Please enter degrees of rotation and press enter.")
+print("2) Please enter degrees of rotation and press enter.")
 degrees = input()
 degrees_rad = int(degrees) * math.pi / 180 # convert degrees to radians
 
 # get offset vector x
-print("Please enter the x component of the offset vector and press enter.")
+print("3) Please enter the x component of the offset vector and press enter.")
 vector_x = input()
 
 # get offset vector y
-print("Please enter the x component of the offset vector and press enter.")
+print("4) Please enter the y component of the offset vector and press enter.")
 vector_y = input()
 
 # get offset vector z
-print("Please enter the x component of the offset vector and press enter.")
+print("5) Please enter the z component of the offset vector and press enter.")
 vector_z = input()
 
 # load array with offset vector and filler data
